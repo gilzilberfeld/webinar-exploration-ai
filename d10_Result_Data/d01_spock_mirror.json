@@ -1,0 +1,40 @@
+{
+  "page": {
+    "pageNumber": 0,
+    "pageSize": 10,
+    "numberOfElements": 1,
+    "totalElements": 1,
+    "totalPages": 1
+  },
+  "characters": [
+    {
+      "uid": "CHMA0000025111",
+      "name": "Spock (mirror)",
+      "gender": "M",
+      "yearOfBirth": 2230,
+      "monthOfBirth": null,
+      "dayOfBirth": null,
+      "placeOfBirth": "Vulcan",
+      "yearOfDeath": null,
+      "monthOfDeath": null,
+      "dayOfDeath": null,
+      "placeOfDeath": null,
+      "height": null,
+      "weight": null,
+      "deceased": false,
+      "bloodType": null,
+      "maritalStatus": null,
+      "serialNumber": null,
+      "hologram": false,
+      "fictionalCharacter": false,
+      "mirror": true,
+      "alternateReality": false,
+      "characterSpecies": [
+        {
+          "uid": "CHMA0000025111",
+          "name": "Vulcan"
+        }
+      ]
+    }
+  ]
+}

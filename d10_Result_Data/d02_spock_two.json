@@ -1,0 +1,35 @@
+{
+  "page": {
+    "pageNumber": 0,
+    "pageSize": 10,
+    "numberOfElements": 1,
+    "totalElements": 1,
+    "totalPages": 1
+  },
+  "characters": [
+    {
+      "uid": "CHMA0000153710",
+      "name": "Spock Two",
+      "gender": "M",
+      "yearOfBirth": null,
+      "monthOfBirth": null,
+      "dayOfBirth": null,
+      "placeOfBirth": null,
+      "yearOfDeath": 2266,
+      "monthOfDeath": null,
+      "dayOfDeath": null,
+      "placeOfDeath": "Exo III",
+      "height": null,
+      "weight": null,
+      "deceased": true,
+      "bloodType": null,
+      "maritalStatus": null,
+      "serialNumber": null,
+      "hologram": false,
+      "fictionalCharacter": false,
+      "mirror": false,
+      "alternateReality": false,
+      "characterSpecies": []
+    }
+  ]
+}
