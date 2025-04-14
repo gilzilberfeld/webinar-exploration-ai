@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b40e9f6d-76c6-44c0-b4d5-1c7e49807aca" name="Changes" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/d01_Charter_suggestions_UI/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d01_Charter_suggestions_UI/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d02_Charter_suggestions_API/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d02_Charter_suggestions_API/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d03_Examples_API/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d03_Examples_API/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d04_Prioritization/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d04_Prioritization/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d05_Next_Step/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d05_Next_Step/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d08_Input_Data/d03_response" afterDir="false" />
+    <list default="true" id="b40e9f6d-76c6-44c0-b4d5-1c7e49807aca" name="Changes" comment="All content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d01_valid_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d01_valid_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d02_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d02_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d03_POM_refactoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d03_POM_refactoring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d08_Getting_To_A_Point/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d07_Getting_To_A_Point/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d08_Getting_To_A_Point/d01_getting_to_the_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/d07_Getting_To_A_Point/d01_getting_to_the_cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d01_spock_mirror.json" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d01_spock_mirror.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d02_spock_two.json" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d02_spock_two.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +35,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for s2_valid_login.test_login_with_valid_credentials.executor": "Run",
+    "Python tests.Python tests for s4_POM_refactoring.test_login_with_valid_credentials.executor": "Run",
+    "Python.s2_getting_to_the_cart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -70,8 +54,30 @@
       <recent name="C:\GitHub\Webinars\webinar-exploration-ai" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Python tests for d06_Generate_Tests.d01_valid_login.test_login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.s2_getting_to_the_cart">
+    <configuration name="s2_getting_to_the_cart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="webinar-exploration-ai" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/d07_Getting_To_A_Point" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/d07_Getting_To_A_Point/s2_getting_to_the_cart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for d06_Generate_Tests.s2_valid_login.test_login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="webinar-exploration-ai" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,15 +88,55 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;d06_Generate_Tests.d01_valid_login.test_login_with_valid_credentials&quot;" />
+      <option name="_new_target" value="&quot;d06_Generate_Tests.s2_valid_login.test_login_with_valid_credentials&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for s2_valid_login.test_login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="webinar-exploration-ai" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/d06_Generate_Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;s2_valid_login.test_login_with_valid_credentials&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for s4_POM_refactoring.test_login_with_valid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="webinar-exploration-ai" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/d06_Generate_Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;s4_POM_refactoring.test_login_with_valid_credentials&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for d06_Generate_Tests.d01_valid_login.test_login_with_valid_credentials" />
+        <item itemvalue="Python.s2_getting_to_the_cart" />
+        <item itemvalue="Python tests.Python tests for s4_POM_refactoring.test_login_with_valid_credentials" />
+        <item itemvalue="Python tests.Python tests for s2_valid_login.test_login_with_valid_credentials" />
+        <item itemvalue="Python tests.Python tests for d06_Generate_Tests.s2_valid_login.test_login_with_valid_credentials" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,11 +163,20 @@
       <option name="project" value="LOCAL" />
       <updated>1744202115459</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="All content">
+      <option name="closed" value="true" />
+      <created>1744205934677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744205934677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="All content" />
+    <option name="LAST_COMMIT_MESSAGE" value="All content" />
   </component>
 </project>
