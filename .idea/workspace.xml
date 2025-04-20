@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e9f6d-76c6-44c0-b4d5-1c7e49807aca" name="Changes" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/d01_Charter_suggestions_UI/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d01_Charter_suggestions_UI/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d02_Charter_suggestions_API/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d02_Charter_suggestions_API/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d03_Examples_API/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d03_Examples_API/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d04_Prioritization/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d04_Prioritization/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d05_Next_Step/d00_prompt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d05_Next_Step/d01_response" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d08_Input_Data/d03_response" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d01_valid_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d01_valid_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d02_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d02_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d07_Generate_Tests/d03_POM_refactoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/d06_Generate_Tests/d03_POM_refactoring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d08_Getting_To_A_Point/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d07_Getting_To_A_Point/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d08_Getting_To_A_Point/d01_getting_to_the_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/d07_Getting_To_A_Point/d01_getting_to_the_cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d00_prompt" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d00_prompt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d01_spock_mirror.json" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d01_spock_mirror.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d09_Input_Data/d02_spock_two.json" beforeDir="false" afterPath="$PROJECT_DIR$/d08_Input_Data/d02_spock_two.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +39,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/GitHub/Webinars/webinar-exploration-ai"
+    "last_opened_file_path": "E:/Github/webinar-exploration-ai",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,6 +72,13 @@
         <item itemvalue="Python tests.Python tests for d06_Generate_Tests.d01_valid_login.test_login_with_valid_credentials" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
