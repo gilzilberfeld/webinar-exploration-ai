@@ -8,37 +8,27 @@ def add_items_to_cart():
         page = browser.new_page()
 
         # Navigate to the login page
-        page.goto("https://www.saucedemo.com/v1/index.html")
+        page.goto("https://bstackdemo.com/signin")
 
-        # Login with valid credentials
-        page.fill("#user-name", "standard_user")
-        page.fill("#password", "secret_sauce")
-        page.click("#login-button")
+        # Enter login credentials (replace with actual ones)
+        page.fill("#username", "demouser")
+        page.fill("#password", "testing123")
 
-        # Verify we're on the products page
-        assert "inventory.html" in page.url, "Login failed"
-        print("Successfully logged in")
+        # Click the login button
+        page.click("#login-btn")
 
-        # Add first item to cart
-        first_add_button = page.locator(".inventory_item:nth-child(1) button.btn_primary")
-        first_item_name = page.locator(".inventory_item:nth-child(1) .inventory_item_name").text_content()
-        first_add_button.click()
-        print(f"Added item 1: {first_item_name}")
+        # Wait for navigation to the product page
+        page.wait_for_url("https://bstackdemo.com/products")
 
-        # Add second item to cart
-        second_add_button = page.locator(".inventory_item:nth-child(4) button.btn_primary")
-        second_item_name = page.locator(".inventory_item:nth-child(4) .inventory_item_name").text_content()
-        second_add_button.click()
-        print(f"Added item 2: {second_item_name}")
+        # Select two items (adjust selectors based on actual HTML elements)
+        page.click("button[data-testid='add-to-cart-0']")
+        page.click("button[data-testid='add-to-cart-1']")
 
-        # Verify cart count is 2
-        cart_badge = page.locator(".shopping_cart_badge")
-        assert cart_badge.text_content() == "2", "Cart count incorrect"
-        print("Cart count verified as 2")
+        # Navigate to the cart page
+        page.click("#cart")
 
-        # Navigate to cart page
-        page.click(".shopping_cart_link")
-        assert "cart.html" in page.url, "Failed to navigate to cart page"
+        # Wait for navigation to the cart page
+        page.wait_for_url("https://bstackdemo.com/cart")
         print("Successfully navigated to cart page")
 
         # Keep the browser open for manual exploration
