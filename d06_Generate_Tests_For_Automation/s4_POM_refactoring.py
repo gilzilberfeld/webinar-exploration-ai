@@ -6,10 +6,10 @@ class LoginPage:
         self.page = page
         self.username_input = page.locator("#user-name")
         self.password_input = page.locator("#password")
-        self.login_button = page.locator("#login-button")
+        self.login_button = page.locator("#login-btn")
 
     def navigate(self):
-        self.page.goto("https://www.saucedemo.com/v1/index.html")
+        self.page.goto("https://bstackdemo.com/signin")
         return self
 
     def login(self, username: str, password: str):
@@ -27,7 +27,7 @@ class ProductsPage:
 
     def is_displayed(self) -> bool:
         current_url = self.page.url
-        return current_url == "https://www.saucedemo.com/v1/inventory.html"
+        return current_url == "https://bstackdemo.com/products"
 
     def has_products(self) -> bool:
         return self.inventory_items.count() > 0
@@ -41,7 +41,7 @@ def test_login_with_valid_credentials(page: Page):
     login_page.navigate()
 
     # Perform login with valid credentials
-    products_page = login_page.login("standard_user", "secret_sauce")
+    products_page = login_page.login("demouser", "testing123")
 
     # Verify successful navigation to products page
     expect(products_page.is_displayed()).to_be_truthy()

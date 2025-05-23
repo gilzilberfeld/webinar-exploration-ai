@@ -1,5 +1,5 @@
-"I want test charters for https://www.saucedemo.com/.
-The main page is at: https://www.saucedemo.com/v1/index.html.
+"I want test charters for https://bstackdemo.com/.
+The main page is at: https://bstackdemo.com/signin.
 This is a sample e-commerce site. The main page contains logging credentials you can use.
 You can also buy things without actual money.
 
