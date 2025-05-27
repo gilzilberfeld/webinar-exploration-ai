@@ -1,5 +1,5 @@
 Response:
-"I'll create test charters for the Sauce Demo e-commerce site focusing on the areas you specified.
+"I'll create test charters for the BrowserStack e-commerce site focusing on the areas you specified.
 Let me break these down into effective test charters:
 
 **Login Page Test Charters:**
