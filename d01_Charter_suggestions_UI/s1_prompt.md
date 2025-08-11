@@ -1,6 +1,6 @@
-"I want test charters for https://www.saucedemo.com/.
-The main page is at: https://www.saucedemo.com/v1/index.html.
-This is a sample e-commerce site. The main page contains logging credentials you can use.
+"I want test charters for https://ecommerce-playground.lambdatest.io/.
+The main page is at: https://ecommerce-playground.lambdatest.io/index.php?route=common/home.
+This is a sample e-commerce site. 
 You can also buy things without actual money.
 
 I want charters around the following:

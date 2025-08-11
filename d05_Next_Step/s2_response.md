@@ -1,24 +1,45 @@
-"Now that you've tested the sorting scenarios with the page sorted by "Price (High to Low)",
-here are logical next steps to explore:
+Since you mentioned you're on a cameras page filtered by Apple products, here are specific test cases you should try next:
 
-1. Add to cart functionality - Test adding products to your cart:
-    1. Add a single product (both highest and lowest priced items)
-    2. Add multiple products
-    3. Verify the cart icon updates with the correct count
-    4. Click the cart icon to verify added products appear correctly
+**Filter & Refinement Testing:**
+1. **Test additional filter combinations:**
+   - Apply price range filters while keeping "Apple" selected
+   - Add brand filters (if multiple brands available) alongside Apple
+   - Test rating/review filters
+   - Apply availability filters (in stock/out of stock)
 
-2. Product details - Test viewing detailed product information:
-    1. Click on product images and names to navigate to product detail pages
-    2. Verify all product information displays correctly
-    3. Test the back button functionality from detail pages
+2. **Filter behavior validation:**
+   - Remove the Apple filter and see if other camera brands appear
+   - Test "Clear All Filters" functionality
+   - Verify filter persistence when navigating back from product pages
 
-3. Filter functionality - If available, test any product filtering options
-4. Responsive design - Test how the page behaves at different screen sizes
-5. Cart interactions from the product page:
-    1. Add and then remove items using the "REMOVE" button
-    2. Add items, navigate away, then return to see if cart state persists
+**Product Display & Sorting:**
+3. **Sort functionality testing:**
+   - Test "Sort by: Price Low to High" and "Price High to Low"
+   - Try "Sort by: Name A-Z" and "Name Z-A"
+   - Test "Sort by: Rating" (if available)
+   - Verify "Sort by: Newest" or "Date Added"
 
-These tests flow naturally from your current state and follow a typical user journey
-after sorting products. The add to cart functionality would be particularly important
-to test next since that's the typical next step in the e-commerce flow
-after a user has sorted products to their preference."
+4. **Product grid testing:**
+   - Switch between grid view and list view (if available)
+   - Test products per page options (12, 25, 50, 100 items)
+   - Verify pagination controls work correctly
+
+**Individual Product Interaction:**
+5. **Test specific Apple camera products:**
+   - Click on iPhone (product_id=40) to test product detail page
+   - Test image zoom and gallery functionality
+   - Verify "Add to Cart" with different quantities
+   - Test "Add to Wishlist" functionality (if available)
+
+6. **Cross-functionality testing:**
+   - Test breadcrumb navigation back to cameras
+   - Use browser back button after filtering
+   - Test search within the filtered results
+   - Verify related products suggestions work
+
+**Cart & Checkout Flow:**
+7. **E-commerce functionality:**
+   - Add multiple Apple products to cart
+   - Test cart quantity updates
+   - Verify cart total calculations
+   - Test "Continue Shopping" vs "Checkout" flows

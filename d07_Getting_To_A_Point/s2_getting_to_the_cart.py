@@ -1,54 +1,135 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Page, expect, sync_playwright
+
+# ==============================================================================
+# Page Object Model: Classes representing pages and components of the website.
+# This makes the test script cleaner and easier to maintain.
+# ==============================================================================
+
+class HomePage:
+    """
+    Represents the home page and its interactions.
+    """
+    def __init__(self, page: Page):
+        self.page = page
+        self.url = "https://ecommerce-playground.lambdatest.io/"
+        # Locator for a product in the "Featured" section by its name
+        self.product_link = lambda name: page.get_by_role("link", name=name, exact=True)
+
+    def navigate(self):
+        """Navigates to the home page."""
+        print(f"Navigating to: {self.url}")
+        self.page.goto(self.url)
+
+    def select_product(self, product_name: str):
+        """Clicks on a product from the home page to go to its detail page."""
+        print(f"Selecting product: {product_name}")
+        self.product_link(product_name).first.click()
+
+class ProductPage:
+    """
+    Represents the product detail page and its interactions.
+    """
+    def __init__(self, page: Page):
+        self.page = page
+        self.add_to_cart_button = page.get_by_role("button", name="Add to Cart")
+        self.success_alert = page.locator(".alert-success")
+
+    def add_to_cart(self):
+        """Clicks the 'Add to Cart' button."""
+        print("Clicking 'Add to Cart' button...")
+        self.add_to_cart_button.click()
+
+    def verify_success_alert(self, product_name: str):
+        """Waits for and verifies the success message after adding an item."""
+        print(f"Verifying success alert for {product_name}...")
+        # Check that the success alert is visible and contains the product name
+        expect(self.success_alert).to_be_visible()
+        expect(self.success_alert).to_contain_text(f"Success: You have added {product_name}")
+        print("Success alert verified.")
+
+class CartPage:
+    """
+    Represents the shopping cart page and its interactions.
+    """
+    def __init__(self, page: Page):
+        self.page = page
+        self.cart_heading = page.get_by_role("heading", name="Shopping Cart")
+
+    def verify_on_page(self):
+        """Verifies that the current page is the shopping cart page."""
+        print("Verifying we are on the Shopping Cart page...")
+        expect(self.cart_heading).to_be_visible()
+        print("Successfully on the cart page.")
+
+class TopNavigation:
+    """
+    Represents the main navigation bar at the top of the site.
+    """
+    def __init__(self, page: Page):
+        self.page = page
+        self.shopping_cart_link = page.get_by_role("link", name="Shopping Cart")
+
+    def go_to_shopping_cart(self):
+        """Navigates to the shopping cart page using the top link."""
+        print("Navigating to the Shopping Cart page via top navigation...")
+        self.shopping_cart_link.click()
 
 
+# ==============================================================================
+# Main test execution function
+# ==============================================================================
 
-def add_items_to_cart():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        page = browser.new_page()
+def run(playwright: sync_playwright) -> None:
+    """
+    This script navigates to an e-commerce site, adds two items
+    to the cart, and then navigates to the shopping cart page using POM.
+    """
+    # Launch the browser. Using Chromium, but can be 'firefox' or 'webkit'.
+    # Headless is set to False to watch the script in action.
+    browser = playwright.chromium.launch(headless=False, slow_mo=500)
+    context = browser.new_context()
+    page = context.new_page()
 
-        # Navigate to the login page
-        page.goto("https://www.saucedemo.com/v1/index.html")
+    # Instantiate our page objects
+    home_page = HomePage(page)
+    product_page = ProductPage(page)
+    cart_page = CartPage(page)
+    top_nav = TopNavigation(page)
 
-        # Login with valid credentials
-        page.fill("#user-name", "standard_user")
-        page.fill("#password", "secret_sauce")
-        page.click("#login-button")
+    # --- Test Steps ---
 
-        # Verify we're on the products page
-        assert "inventory.html" in page.url, "Login failed"
-        print("Successfully logged in")
+    # 1. Go to the home page
+    home_page.navigate()
 
-        # Add first item to cart
-        first_add_button = page.locator(".inventory_item:nth-child(1) button.btn_primary")
-        first_item_name = page.locator(".inventory_item:nth-child(1) .inventory_item_name").text_content()
-        first_add_button.click()
-        print(f"Added item 1: {first_item_name}")
+    # 2. Add the first item to the cart
+    product1_name = "iPod Classic"
+    home_page.select_product(product1_name)
+    product_page.add_to_cart()
+    product_page.verify_success_alert(product1_name)
 
-        # Add second item to cart
-        second_add_button = page.locator(".inventory_item:nth-child(4) button.btn_primary")
-        second_item_name = page.locator(".inventory_item:nth-child(4) .inventory_item_name").text_content()
-        second_add_button.click()
-        print(f"Added item 2: {second_item_name}")
+    # 3. Go back to the home page to select another item
+    home_page.navigate()
 
-        # Verify cart count is 2
-        cart_badge = page.locator(".shopping_cart_badge")
-        assert cart_badge.text_content() == "2", "Cart count incorrect"
-        print("Cart count verified as 2")
+    # 4. Add the second item to the cart
+    product2_name = "MacBook Pro"
+    home_page.select_product(product2_name)
+    product_page.add_to_cart()
+    product_page.verify_success_alert(product2_name)
 
-        # Navigate to cart page
-        page.click(".shopping_cart_link")
-        assert "cart.html" in page.url, "Failed to navigate to cart page"
-        print("Successfully navigated to cart page")
+    # 5. Navigate to the shopping cart page
+    top_nav.go_to_shopping_cart()
+    cart_page.verify_on_page()
 
-        # Keep the browser open for manual exploration
-        print("\nBrowser is open for you to continue testing manually.")
-        print("The script has completed the requested steps.")
+    print("\nThe script has paused. You can now inspect the browser. Close the browser to end.")
 
-        # Wait for user to close browser manually
-        input("Press Enter to close the browser when you're finished testing...")
-        browser.close()
+    # ---------------------
+    # The script will pause here. You can add more actions below,
+    # or simply close the browser window when you're done.
+    # ---------------------
 
+    context.close()
+    browser.close()
 
 if __name__ == "__main__":
-    add_items_to_cart()
+    with sync_playwright() as playwright:
+        run(playwright)
